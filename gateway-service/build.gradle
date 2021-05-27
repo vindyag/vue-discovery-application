@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.2'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.4.2'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-discovery', version: '3.0.1'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-zuul', version: '2.2.6.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
+}
