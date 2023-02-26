@@ -1,0 +1,12 @@
+core-url: http://localhost:8080
+#http://localhost:8081/gateway/core/product-store/products
+#http://localhost:8081/gateway/cart
+zuul:
+  routes:
+    core:
+      path: /core/product-store/**
+      url: "${core-url}/product-store"
+    cart:
+      path: /cart/**
+      name: product-cart
+
