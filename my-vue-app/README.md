@@ -1,4 +1,4 @@
-# sample-gui
+# my-vue-app
 
 ## Project setup
 ```

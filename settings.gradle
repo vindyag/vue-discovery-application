@@ -1,2 +1,2 @@
 include 'gateway-service'
-
+rootProject.name = 'vue-discovery-application'
