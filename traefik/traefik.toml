@@ -1,0 +1,41 @@
+defaultEntryPoints = ["http", "https"]
+
+logLevel = "INFO"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+  [entryPoints.dashboard]
+  address = ":8081"
+
+#enable api only if you need to see the dashboard
+[api]
+dashboard = true
+
+
+# Enable Consul Catalog Provider.
+[consulCatalog]
+
+# Consul server endpoint.
+endpoint = "127.0.0.1:8500"
+
+[file]
+
+[backends]
+  [backends.gateway]
+    [backends.gateway.servers.server1]
+    url = "http://localhost:8081"
+    weight = 1
+  [backends.consul]
+    [backends.consul.servers.server1]
+    url = "http://localhost:8500"
+    weight = 1
+
+[frontends]
+  [frontends.gateway]
+  backend = "gateway"
+  passHostHeader = true
+    [frontends.gateway.routes.http]
+    rule = "PathPrefix:/gateway"
+
+
