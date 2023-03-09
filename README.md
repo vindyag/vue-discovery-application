@@ -1,14 +1,19 @@
 ## Steps 
 
 ### 1. Set up Consul:
-Download and install Consul.
-Start the Consul server: consul agent -dev.
+Extract or download consul and navigate to the folder.
+Start the Consul server: 
+```
+./consul agent -dev
+```
 Register your Spring Boot application with Consul as in the application.properties file.
 
 ### 2. Configure Traefik:
-Download and install Traefik.
-Create a traefik.toml file in your Traefik configuration directory.
-Add the necessary configuration options to the traefik.toml file
+Add the necessary configuration options to the traefik.toml file.
+Start it up using the docker-compose file
+```
+docker-compose up
+```
 
 ### 3. Configure Spring Boot
 Configure Spring Boot as in this project and startup
