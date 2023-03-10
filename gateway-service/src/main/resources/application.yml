@@ -1,9 +1,12 @@
-core-url: http://localhost:8080
+core-app-1-url: http://localhost:9090
+core-app-2-url: http://localhost:9091
 
 zuul:
   routes:
-    core:
-      path: /core/product-store/**
-      url: "${core-url}/product-store"
-
+    core1:
+      path: /products/**
+      url: "${core-app-1-url}/products"
+    core2:
+      path: /prices/**
+      url: "${core-app-2-url}/prices"
 
