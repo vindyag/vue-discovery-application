@@ -12,7 +12,6 @@ logLevel = "INFO"
 [api]
 dashboard = true
 
-
 # Enable Consul Catalog Provider.
 [consulCatalog]
 
@@ -24,7 +23,7 @@ endpoint = "127.0.0.1:8500"
 [backends]
   [backends.gateway]
     [backends.gateway.servers.server1]
-    url = "http://localhost:8081"
+    url = "http://localhost:7071"
     weight = 1
   [backends.consul]
     [backends.consul.servers.server1]
