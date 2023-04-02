@@ -9,9 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class ResourceConfig implements WebMvcConfigurer {
-
+//This configuration is equivalent to the spring.resources.static-locations
+//  spring.resources.static-locations=classpath:/static/,classpath:/resources/,classpath:/META-INF/resources/,classpath:/public/,classpath:/src/main/resources/static/
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
             .addResourceLocations("classpath:/static/");
+           // .addResourceLocations("classpath:/src/main/resources/static/");
     }
 }
