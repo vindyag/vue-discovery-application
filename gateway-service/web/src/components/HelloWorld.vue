@@ -4,8 +4,8 @@
 
     <h3>Navigations</h3>
     <ul>
-      <li><a href="/products" >products</a></li>
-      <li><a href="/prices" >prices</a></li>
+      <li><a href="http://localhost:7071/gateway/products" >products</a></li>
+      <li><a href="http://localhost:7071/gateway/prices" >prices</a></li>
     </ul>
 
   </div>

@@ -23,7 +23,7 @@ endpoint = "127.0.0.1:8500"
 [backends]
   [backends.gateway]
     [backends.gateway.servers.server1]
-    url = "http://localhost:7071"
+    url = "http://localhost:7071/gateway"
     weight = 1
   [backends.consul]
     [backends.consul.servers.server1]
