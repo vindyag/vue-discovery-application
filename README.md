@@ -1,3 +1,7 @@
+## Structure
+
+### 
+
 ## Steps 
 
 ### 1. Set up Consul:
@@ -8,16 +12,24 @@ Start the Consul server:
 ```
 Register your Spring Boot application with Consul as in the application.properties file.
 
-### 2. Configure Traefik:
+### 2. Setup Traefik:
 Add the necessary configuration options to the traefik.toml file.
 Start it up using the docker-compose file
 ```
 docker-compose up
 ```
+### 3. Build the Vue files
+Build and bundle the Vue files using a package manager
+```
+yarn build or npm run build
+```
+Then copy the web file in dist folder to gateway-service:server src/main/resources/static folder
+You use following gradle task under gateway-service -> tasks -> application -> ```copyVueApp```
 
-### 3. Configure Spring Boot
-Configure Spring Boot as in this project and startup
+### 3. Deploy web app in Spring Boot embedded tomcat
+You use following gradle task under gateway-service -> tasks -> other -> ```bootRun```
 
 ### 3. Verify
 Verify that your application is registered with Consul and visible in the Consul UI.
 Verify that your application is accessible through Traefik by making requests to the defined endpoints.
+Verify that your backend applications are routed via Zuul Gateway

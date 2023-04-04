@@ -2,10 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
 
-    <h3>Navigations</h3>
+    <h3>Navigate to:</h3>
     <ul>
-      <li><a href="http://localhost:7071/gateway/products" >products</a></li>
-      <li><a href="http://localhost:7071/gateway/prices" >prices</a></li>
+      <li><a href="http://localhost:7071/gateway/products" >Products</a></li>
+      <li><a href="http://localhost:7071/gateway/prices" >Prices</a></li>
     </ul>
 
   </div>
