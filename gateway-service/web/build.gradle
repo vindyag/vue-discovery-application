@@ -1,0 +1,39 @@
+plugins {
+    id "com.github.node-gradle.node" version '3.4.0'
+}
+
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+node {
+    version = '14.17.5'
+    download = true
+}
+
+dependencies {
+
+}
+
+task yarnBuildVueApp(type: YarnTask, dependsOn: yarn) {
+    args = ['build']
+}
+
+/*task buildVueApp(type: Exec) {
+    workingDir '.'
+    commandLine 'npm', 'run', 'build'
+}*/
+
+task copyVueApp(type: Copy, dependsOn: yarnBuildVueApp) {
+    println "copying from $projectDir to $rootDir/gateway-service/server/src/resources/static"
+
+    from "$projectDir/dist"
+    into "$rootDir/gateway-service/server/src/resources/static"
+}
+
+
+
+
