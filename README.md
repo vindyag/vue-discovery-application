@@ -17,6 +17,7 @@ Add the necessary configuration options to the traefik.toml file.
 Start it up using the docker-compose file
 ```
 docker-compose up
+docker-compose down
 ```
 ### 3. Build the Vue files
 Build and bundle the Vue files using a package manager

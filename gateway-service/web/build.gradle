@@ -28,10 +28,10 @@ task yarnBuildVueApp(type: YarnTask, dependsOn: yarn) {
 }*/
 
 task copyVueApp(type: Copy, dependsOn: yarnBuildVueApp) {
-    println "copying from $projectDir to $rootDir/gateway-service/server/src/resources/static"
+    println "copying from $projectDir/dist to $rootDir/gateway-service/server/src/main/resources/static"
 
     from "$projectDir/dist"
-    into "$rootDir/gateway-service/server/src/resources/static"
+    into "$rootDir/gateway-service/server/src/main/resources/static"
 }
 
 
