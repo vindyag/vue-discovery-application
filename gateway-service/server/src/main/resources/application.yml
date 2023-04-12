@@ -6,7 +6,7 @@ zuul:
     core1:
       path: /products/**
       serviceId: core-app-1
-      strip-prefix: true
+      strip-prefix: false
 
     core2:
       path: /prices/**
