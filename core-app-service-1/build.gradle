@@ -1,13 +1,13 @@
 plugins {
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
-    id 'org.springframework.boot' version '2.6.12'
-    id 'io.spring.dependency-management' version '1.1.0'
 }
 
 version '1.0-SNAPSHOT'
 
 repositories {
-    //mavenLocal()
+    mavenLocal()
     mavenCentral()
 }
 
@@ -18,7 +18,7 @@ java {
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
-    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-discovery', version: '3.1.0'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-discovery', version: '2.2.6.RELEASE'
 }
 
 test {

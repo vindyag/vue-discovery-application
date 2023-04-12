@@ -5,18 +5,12 @@ zuul:
   routes:
     core1:
       path: /products/**
-      url: http://localhost:9090/app1/products
-    core1_9091:
-      path: /products/**
-      url: http://localhost:9091/app1/products
+      serviceId: core-app-1
+      strip-prefix: true
+
     core2:
       path: /prices/**
       url: "${core-app-2-base-url}/prices"
-
-ribbon:
-  eureka:
-    enabled: false
-  NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
 
 logging:
   level:

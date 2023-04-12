@@ -9,16 +9,20 @@ import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-@RequestMapping(value="products", produces = {APPLICATION_JSON_VALUE})
+@RequestMapping
 @RestController
 public class ProductController {
 
     @Value("${server.port}")
     private int serverPort;
 
-    @GetMapping
-    public ResponseEntity getProducts() {
+    @GetMapping("/products")
+    public ResponseEntity<String> getProducts() {
         return ResponseEntity.ok().body("Returning products from " + serverPort);
     }
 
+    @GetMapping("/")
+    public ResponseEntity<String> getRoot() {
+        return ResponseEntity.ok().body("Returning root from " + serverPort);
+    }
 }
