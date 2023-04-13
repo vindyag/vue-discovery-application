@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.6.12'
-    id 'io.spring.dependency-management' version '1.1.0'
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 }
 
 version '1.0-SNAPSHOT'
@@ -18,8 +18,9 @@ java {
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
-    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-consul-discovery', version: '3.1.0'
-}
+    implementation('org.springframework.cloud:spring-cloud-starter-consul-discovery:2.2.6.RELEASE') {
+        exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-netflix-ribbon'
+    }}
 
 test {
 }

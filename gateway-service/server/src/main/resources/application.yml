@@ -7,7 +7,6 @@ zuul:
       path: /products/**
       serviceId: core-app-1
       strip-prefix: false
-
     core2:
       path: /prices/**
       url: "${core-app-2-base-url}/prices"
