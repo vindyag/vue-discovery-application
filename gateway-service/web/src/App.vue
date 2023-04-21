@@ -1,6 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome,.!!"/>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome,.!!"/>
+  </div>
 </template>
 
 <script>
@@ -14,8 +16,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 </style>

@@ -1,3 +1,7 @@
+### Design
+![img.png](img.png)
+
+
 ### Structure of gateway-service
 
 gateway-service comprise 2 sub-modules
@@ -30,4 +34,3 @@ yarn build or npm run build
 ```
 yarn lint
 ```
-

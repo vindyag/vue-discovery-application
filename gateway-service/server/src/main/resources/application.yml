@@ -1,4 +1,9 @@
-core-app-1-base-url: http://localhost:9090/app1
+#zuul gateway properties
+#core1 -> discover service instances using consul using serviceId core-app-1
+#http://localhost:7071/gateway/products
+#core2 -> use provided url to route to core-app-2
+#http://localhost:7071/gateway/prices
+
 core-app-2-base-url: http://localhost:9095/app2
 
 zuul:

@@ -1,6 +1,6 @@
 ## Structure
 
-### 
+![img.png](img.png)
 
 ## Steps 
 
@@ -19,6 +19,8 @@ Start it up using the docker-compose file
 docker-compose up
 docker-compose down
 ```
+traefik dashboard can be found in http://localhost:8080/dashboard/
+
 ### 3. Build the Vue files
 Build and bundle the Vue files using a package manager
 ```
